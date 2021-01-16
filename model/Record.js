@@ -1,8 +1,11 @@
 var mongoose = require("mongoose");
 
 var recordSchema = new mongoose.Schema({
-    createdAt: { type:Date, required:true },
-    totalCount : Number
+    key : String,
+    createdAt: Date,
+    totalCount : Number,
+    counts: Array,
+    value: String
 });
 
 mongoose.model("Record", recordSchema);
