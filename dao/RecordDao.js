@@ -1,7 +1,5 @@
 var Record = require("../model/Record");
-var mongoose = require("mongoose");
 var responseBuilder = require("../response/ResponseBuilder");
-mongoose.Promise = global.Promise;
 
 exports.fecthAllRecords = async (req, res) => {
     const {

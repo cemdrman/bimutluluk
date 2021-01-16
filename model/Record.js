@@ -1,5 +1,4 @@
 var mongoose = require("mongoose");
-mongoose.Promise = global.Promise;
 
 var recordSchema = new mongoose.Schema({
     key : String,
