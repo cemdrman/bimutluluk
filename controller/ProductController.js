@@ -8,16 +8,45 @@ router.post('/', function (req, res) {
     console.debug('Request: ' + reqString);
     //validate request
 
-    const query = Record.find({
-        createdAt: {
-            $gte: req.body.startDate,
-            $lt: req.body.endDate
+    // const query = Record.find({
+    //     createdAt: {
+    //         $gte: req.body.startDate,
+    //         $lt: req.body.endDate
+    //     }
+    // }).sort({
+    //     createdAt: 'asc'
+    // });
+
+    const query = Record.aggregate([{
+        $project: {
+            totalCount: {
+                $sum: "$counts"
+            },
+            key: "$key",
+            createdAt: "$createdAt"
         }
-    }).sort({
+    }, {
+        $match: {
+
+            $and: [{
+                    createdAt: {
+                        $gte: req.body.startDate,
+                        $lte: req.body.endDate
+                    },
+                    totalCount: {
+                        $gt: req.body.minCount,
+                        $lt: req.body.maxCount,
+                    }
+                }
+
+            ]
+
+        }
+    }]).sort({
         createdAt: 'asc'
     });
-    // selecting the 'key', 2createdAt' and 'totalCount' fields
-    query.select('key createdAt totalCount');
+    // selecting the 'key', 'createdAt' and 'totalCount' fields
+    //query.select('key createdAt counts');
     // execute the query at a later time
     query.exec(function (err, records) {
 
