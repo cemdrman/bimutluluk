@@ -9,13 +9,11 @@ call `POST localhost:5000/api/records`
 
 ### Sample Request
 
-Body must be a JSON.
-
 ```
 {
-    "startDate": "2019-01-01",
-    "endDate": "2019-10-31",
-    "minCount": 100,
-    "maxCount": 900
+	"startDate": "2016-01-26", 
+	"endDate": "2018-02-02", 
+	"minCount": 2980,
+	"maxCount": 3000
 }
 ```
