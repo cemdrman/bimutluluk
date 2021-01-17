@@ -1,7 +1,9 @@
 var mongoose = require('mongoose');
 var dbConfig = require('../config/dbConfig');
 
-mongoose.connect(dbConfig.CONNECTION_URL, dbConfig.OPTIONS).then(
+mongoose.connect(dbConfig.CONNECTION_URL, {
+    useNewUrlParser: true
+}).then(
     () => {
         console.log("Connected to mongoDB")
     },
@@ -10,3 +12,4 @@ mongoose.connect(dbConfig.CONNECTION_URL, dbConfig.OPTIONS).then(
         console.log(err)
     }
 );;
+mongoose.set('bufferCommands', false);

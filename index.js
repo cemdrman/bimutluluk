@@ -3,6 +3,7 @@ var app = express();
 var ProductController = require('./controller/recordController');
 var express = require('express');
 var bodyParser = require('body-parser');
+require("./db/dbConnection");
 require('dotenv').config();
 var exceptionHandler = require("./exception/exceptionHandler");
 var port = process.env.PORT;
