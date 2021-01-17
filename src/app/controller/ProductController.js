@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var recordService = require("../service/RecordService");
-var validator = require("../validator/recordValidator");
 var responseBuilder = require("../response/ResponseBuilder");
 
 const getRecords = async (req, res, next) => {
