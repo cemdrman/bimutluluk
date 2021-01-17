@@ -1,4 +1,4 @@
-var Record = require("../model/Record");
+var Record = require("../model/record");
 
 exports.fecthAllRecords = async (startDate, endDate, minCount, maxCount) => {
     return await Record.aggregate([{
