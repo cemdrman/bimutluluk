@@ -1,5 +1,6 @@
 var app = require("./app");
+var port = process.env.port || 5000;
 
-app.listen(process.env.port || 5000, function () {
-    console.log('Express Server Listening');
+app.listen(port, function () {
+    console.log('Express Server Listening ' + port);
 });
