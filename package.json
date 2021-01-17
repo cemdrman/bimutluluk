@@ -2,9 +2,9 @@
   "name": "bimutluluk",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/app/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./src/app/index.js",
+    "start": "npm index.js",
     "test": "NODE_ENV=test jest --testTimeout=20000"
   },
   "author": "",
