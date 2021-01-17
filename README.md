@@ -1,5 +1,7 @@
 Installing Instructions.
 
+https://bimutluluk.herokuapp.com/api/records/
+
 - Clone the project.
 - Enter the project folder.
 - Run "npm install".
