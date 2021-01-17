@@ -3,7 +3,9 @@ var app = express();
 var ProductController = require('./controller/recordController');
 var express = require('express');
 var bodyParser = require('body-parser');
-var port = process.env.port || 5555;
+require('dotenv').config();
+
+var port = process.env.PORT;
 
 app.use(bodyParser.urlencoded({
     extended: true
