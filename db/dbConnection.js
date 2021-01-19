@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const dbConfig = require('../config/dbConfig');
 
 mongoose.connect(dbConfig.CONNECTION_URL, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true 
 }).then(
     () => {
         console.log("Connected to mongoDB")
