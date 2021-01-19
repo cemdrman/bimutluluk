@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const recordSchema = new mongoose.Schema({
     key : String,
@@ -8,5 +8,5 @@ const recordSchema = new mongoose.Schema({
     value: String
 });
 
-mongoose.model("Record", recordSchema);
-module.exports = mongoose.model("Record");
+mongoose.model('Record', recordSchema);
+module.exports = mongoose.model('Record');

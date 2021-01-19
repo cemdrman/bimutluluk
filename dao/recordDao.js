@@ -1,14 +1,14 @@
-const Record = require("../model/record");
+const Record = require('../model/record');
 
 exports.fecthAllRecords = async (startDate, endDate, minCount, maxCount) => {
     return await Record.aggregate([{
         $project: {
             _id: false,
             totalCount: {
-                $sum: "$counts"
+                $sum: '$counts'
             },
-            key: "$key",
-            createdAt: "$createdAt"
+            key: '$key',
+            createdAt: '$createdAt'
         }
     }, {
         $match: {

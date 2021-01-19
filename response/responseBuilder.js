@@ -1,8 +1,8 @@
 const successCode = 0;
-const successMessage = "Success";
+const successMessage = 'Success';
 
 const errorCode = -1;
-const errorCMessage = "Failed";
+const errorCMessage = 'Error';
 /**
  * Success Reponse.
  * @param {number} status  - Success response status code

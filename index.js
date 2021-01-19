@@ -1,10 +1,10 @@
-const express = require("express");
+const express = require('express');
 const app = express();
 const RecordController = require('./controller/recordController');
 const bodyParser = require('body-parser');
-require("./db/dbConnection");
+require('./db/dbConnection');
 require('dotenv').config();
-const exceptionHandler = require("./exception/exceptionHandler");
+const exceptionHandler = require('./exception/exceptionHandler');
 const port = process.env.PORT;
 
 app.use(bodyParser.urlencoded({

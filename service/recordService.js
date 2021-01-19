@@ -1,4 +1,4 @@
-const recordDao = require("../dao/recordDao");
+const recordDao = require('../dao/recordDao');
 
 exports.getAllRecords = async (req, res) => {
     const {

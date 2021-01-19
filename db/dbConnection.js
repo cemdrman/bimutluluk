@@ -6,10 +6,10 @@ mongoose.connect(dbConfig.CONNECTION_URL, {
     useUnifiedTopology: true 
 }).then(
     () => {
-        console.log("Connected to mongoDB")
+        console.log('Connected to mongoDB')
     },
     err => {
-        console.log("Can Not Connected to mongoDB")
+        console.log('Can Not Connected to mongoDB')
         console.log(err)
     }
 );;
