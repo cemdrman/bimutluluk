@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
-const ProductController = require('./controller/recordController');
-const express = require('express');
+const RecordController = require('./controller/recordController');
 const bodyParser = require('body-parser');
 require("./db/dbConnection");
 require('dotenv').config();
@@ -15,7 +14,7 @@ app.use(bodyParser.json());
 // Handle errors
 app.use(exceptionHandler);
 
-app.use('/api/records', ProductController);
+app.use('/api/records', RecordController);
 
 app.listen(port, function () {
     console.log('Express Server Listening ' + port);
