@@ -1,7 +1,6 @@
-Installing Instructions.
-
 https://bimutluluk.herokuapp.com/api/records/
 
+Installing Instructions.
 - Clone the project.
 - Enter the project folder.
 - Run "npm install".
@@ -19,3 +18,7 @@ call `POST localhost:5000/api/records`
 	"maxCount": 3000
 }
 ```
+
+For best practices:
+
+https://expressjs.com/en/advanced/best-practice-performance.html#handle-exceptions-properly
