@@ -1,6 +1,6 @@
-var mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
-var recordSchema = new mongoose.Schema({
+const recordSchema = new mongoose.Schema({
     key : String,
     createdAt: Date,
     totalCount : Number,

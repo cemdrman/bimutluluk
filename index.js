@@ -1,12 +1,12 @@
-var express = require("express");
-var app = express();
-var ProductController = require('./controller/recordController');
-var express = require('express');
-var bodyParser = require('body-parser');
+const express = require("express");
+const app = express();
+const ProductController = require('./controller/recordController');
+const express = require('express');
+const bodyParser = require('body-parser');
 require("./db/dbConnection");
 require('dotenv').config();
-var exceptionHandler = require("./exception/exceptionHandler");
-var port = process.env.PORT;
+const exceptionHandler = require("./exception/exceptionHandler");
+const port = process.env.PORT;
 
 app.use(bodyParser.urlencoded({
     extended: true
